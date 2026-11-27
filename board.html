@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Student Portal | Marks Board</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html">My Student Portal</a>
+    <nav aria-label="Main navigation">
+      <a href="./index.html">Register</a>
+      <a href="./board.html" aria-current="page">Marks board</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <p class="eyebrow">ACADEMIC RECORDS</p>
+      <h1 id="welcome">Welcome to the marks board</h1>
+      <p id="load-time" class="muted"></p>
+      <div class="toolbar">
+        <label for="sort-select">Sort students</label>
+        <select id="sort-select">
+          <option value="name">Name A–Z</option>
+          <option value="marks">Marks: highest first</option>
+        </select>
+        <button id="back-button" class="button button-secondary" type="button">Back</button>
+      </div>
+      <p id="board-message" class="status" aria-live="polite">Loading student records…</p>
+      <div class="table-wrap">
+        <table id="marks-table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Student name</th>
+              <th scope="col">City</th>
+              <th scope="col">Marks</th>
+              <th scope="col">Grade</th>
+            </tr>
+          </thead>
+          <tbody id="marks-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">My Student Portal · Web Technologies</footer>
+</body>
+</html>

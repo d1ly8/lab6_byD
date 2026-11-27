@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Student Portal | Registration</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html">My Student Portal</a>
+    <nav aria-label="Main navigation">
+      <a href="./index.html" aria-current="page">Register</a>
+      <a href="./board.html">Marks board</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel form-panel">
+      <p class="eyebrow">STUDENT SERVICES</p>
+      <h1>Student registration</h1>
+      <p class="muted">Complete the form to continue to the student marks board.</p>
+
+      <ul id="form-errors" class="error-list" aria-live="polite"></ul>
+
+      <form id="registration-form" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <small id="name-counter" class="hint">0 characters left</small>
+          <small class="field-error" id="name-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <small class="field-error" id="email-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone number (9 digits)</label>
+          <input id="phone" name="phone" type="tel" inputmode="numeric" maxlength="9" placeholder="901234567" required>
+          <small class="field-error" id="phone-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="new-password" required>
+          <small class="field-error" id="password-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="confirm-password">Confirm password</label>
+          <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" required>
+          <small class="field-error" id="confirm-password-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="city">City</label>
+          <select id="city" name="city" required>
+            <option value="">Choose your city</option>
+            <option value="Tashkent">Tashkent</option>
+            <option value="Samarkand">Samarkand</option>
+            <option value="Bukhara">Bukhara</option>
+            <option value="Andijan">Andijan</option>
+            <option value="Other">Other</option>
+          </select>
+          <small id="city-message" class="hint" aria-live="polite">You have not chosen a city yet.</small>
+          <small class="field-error" id="city-error"></small>
+        </div>
+
+        <button class="button" type="submit">Register</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">My Student Portal · Web Technologies</footer>
+</body>
+</html>
